@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=PT+Sans+Narrow:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes slide-in-right {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-left {
+    0% { 
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  @keyframes vibrantColors {
+    0% { color: #ff0000; }
+    25% { color: #00ff00; }
+    50% { color: #0000ff; }
+    75% { color: #ff00ff; }
+    100% { color: #ff0000; }
+  }
+
+  @keyframes popUp {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes flip {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 1s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 1s ease-out;
+  }
+
+  .animate-wave {
+    display: inline-block;
+    animation: wave 2s infinite;
+  }
+
+  .animate-vibrant {
+    animation: vibrantColors 5s infinite;
+  }
+
+  .pop-up {
+    animation: popUp 0.5s ease-out forwards;
+  }
+
+  .project-container {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .project-container:hover {
+    transform: scale(1.05);
+  }
+
+  .hover\\:rotate {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .hover\\:rotate:hover {
+    transform: rotate(360deg);
+  }
+
+  .animate-flip {
+    animation: flip 2s ease-out;
+  }
+}
