@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import PasswordImage from '../assets/Password.png';
 import youtubeCloneImage from '../assets/Youtube.png';
 import aceprrpImage from '../assets/AcePrep.png';
+import shoeshineImage from '../assets/ShoeShine Website.png'; 
 
 const Projects = () => {
   const projectRef = useRef(null);
@@ -32,9 +33,9 @@ const Projects = () => {
       <p className="text-xl text-[#EAAA00] mt-4 font-poppins text-center"> {/* Mustard yellow color and centered */}
         Here are some of the projects I've worked on:
       </p>
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* Adjust grid for responsiveness */}
         <div className="flex flex-col items-center">
-          <div className="w-100 h-80 rounded-lg shadow-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg project-container" style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}> {/* Glass effect */}
+          <div className="w-full h-80 rounded-lg shadow-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg project-container" style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}> {/* Glass effect */}
             <img
               src={PasswordImage}
               alt="Password Generator"
@@ -44,7 +45,7 @@ const Projects = () => {
           <span className="text-white font-bold mt-2">Password Generator</span> {/* White color */}
         </div>
         <div className="flex flex-col items-center">
-          <div className="w-100 h-80 rounded-lg shadow-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg project-container" style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}> {/* Glass effect */}
+          <div className="w-full h-80 rounded-lg shadow-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg project-container" style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}> {/* Glass effect */}
             <img
               src={youtubeCloneImage}
               alt="YouTube Clone"
@@ -53,8 +54,8 @@ const Projects = () => {
           </div>
           <span className="text-white font-bold mt-2">YouTube Clone</span> {/* White color */}
         </div>
-        <div className="flex flex-col items-center md:col-span-2">
-          <div className="w-100 h-80 rounded-lg shadow-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg project-container" style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}> {/* Glass effect */}
+        <div className="flex flex-col items-center">
+          <div className="w-full h-80 rounded-lg shadow-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg project-container" style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}> {/* Glass effect */}
             <img
               src={aceprrpImage}
               alt="AcePrep"
@@ -62,6 +63,16 @@ const Projects = () => {
             />
           </div>
           <span className="text-white font-bold mt-2">AcePrep</span> {/* White color */}
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="w-full h-80 rounded-lg shadow-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg project-container" style={{ boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}> {/* Glass effect */}
+            <img
+              src={shoeshineImage}
+              alt="Show Shine"
+              className="project-image w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <span className="text-white font-bold mt-2">Shoe Shine</span> {/* White color */}
         </div>
       </div>
     </div>
